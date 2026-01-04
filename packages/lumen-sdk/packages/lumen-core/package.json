@@ -1,0 +1,41 @@
+{
+  "name": "@lumen/core",
+  "version": "0.0.1",
+  "description": "Framework-agnostic Lumen SDK core for fire-and-forget request tracking",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "test": "vitest",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "lumen",
+    "observability",
+    "analytics",
+    "monitoring",
+    "fire-and-forget"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  }
+}

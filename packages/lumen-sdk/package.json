@@ -1,0 +1,24 @@
+{
+  "name": "lumen-sdk",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Plug and play traffic analyzer for your Next.js application",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "dev": "pnpm -r --parallel dev",
+    "lint": "pnpm -r lint",
+    "clean": "pnpm -r clean"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
+

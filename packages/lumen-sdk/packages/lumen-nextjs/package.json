@@ -1,0 +1,49 @@
+{
+  "name": "@lumen/nextjs",
+  "version": "0.0.1",
+  "description": "Next.js adapter for @lumen/core - proxy.ts integration",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "test": "vitest",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "nextjs",
+    "lumen",
+    "proxy",
+    "middleware",
+    "observability",
+    "analytics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@lumen/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "next": "^15.0.0 || ^16.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "next": "^15.0.3",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  }
+}

@@ -1,0 +1,30 @@
+# Dependencies and build artifacts
+vendor
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Docs
+docs
+*.md
+!README.md
+
+# Tests
+*_test.go
+coverage.out

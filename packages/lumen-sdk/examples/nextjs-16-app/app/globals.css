@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-zinc-50 text-zinc-950 antialiased;
+	}
+}
+
+@layer components {
+	.btn-primary {
+		@apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-zinc-900 text-white font-medium hover:bg-zinc-800 transition-colors;
+	}
+
+	.btn-secondary {
+		@apply inline-flex items-center justify-center gap-2 px-6 py-3 border border-zinc-300 text-zinc-700 font-medium hover:bg-zinc-100 transition-colors;
+	}
+
+	.nav-link {
+		@apply text-zinc-600 hover:text-zinc-950 transition-colors font-medium;
+	}
+}

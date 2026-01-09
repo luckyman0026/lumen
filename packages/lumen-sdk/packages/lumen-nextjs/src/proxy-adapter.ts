@@ -1,5 +1,5 @@
-import type { LumenClient } from '@lumen/core';
-import { createLumenClient } from '@lumen/core';
+import type { LumenClient } from '@lumen/lumen-core';
+import { createLumenClient } from '@lumen/lumen-core';
 import type { NextFetchEvent, NextRequest } from 'next/server';
 import type { CreateNextJSLumenOptions, NextJSLumenClient } from './types';
 import { extractRequestData, shouldCapture } from './utils';

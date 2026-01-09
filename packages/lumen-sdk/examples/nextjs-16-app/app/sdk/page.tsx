@@ -25,7 +25,7 @@ export default function SDKPage() {
 			>
 				<H2>Installation</H2>
 				<P>Install the SDK using your preferred package manager:</P>
-				<CodeBlock filename="Terminal">{`pnpm add @lumen/nextjs`}</CodeBlock>
+				<CodeBlock filename="Terminal">{`pnpm add @lumen/lumen-nextjs`}</CodeBlock>
 
 				<H2>Quick Start</H2>
 				<P>
@@ -35,13 +35,13 @@ export default function SDKPage() {
 				</P>
 
 				<H3>1. Create your proxy file</H3>
-				<CodeBlock filename="proxy.ts">{`import { createLumen } from '@lumen/nextjs';
+				<CodeBlock filename="proxy.ts">{`import { createLumen } from '@lumen/lumen-nextjs';
 import { NextRequest, NextFetchEvent, NextResponse } from 'next/server';
 
 const tracker = createLumen({
-  ingestUrl: process.env.INTELLITRACK_INGEST_URL!,
-  keyId: process.env.INTELLITRACK_KEY_ID!,
-  hmacSecret: process.env.INTELLITRACK_HMAC_SECRET!,
+  ingestUrl: process.env.LUMEN_INGEST_URL!,
+  keyId: process.env.LUMEN_KEY_ID!,
+  hmacSecret: process.env.LUMEN_HMAC_SECRET!,
 });
 
 export function proxy(req: NextRequest, event: NextFetchEvent) {
@@ -54,9 +54,9 @@ export const config = {
 };`}</CodeBlock>
 
 				<H3>2. Configure environment variables</H3>
-				<CodeBlock filename=".env.local">{`INTELLITRACK_INGEST_URL=https://your-backend.com/v1/events
-INTELLITRACK_KEY_ID=prod-key-1
-INTELLITRACK_HMAC_SECRET=your-secret`}</CodeBlock>
+				<CodeBlock filename=".env.local">{`LUMEN_INGEST_URL=https://your-backend.com/v1/events
+LUMEN_KEY_ID=prod-key-1
+LUMEN_HMAC_SECRET=your-secret`}</CodeBlock>
 
 				<H3>3. Deploy and start tracking</H3>
 				<P>

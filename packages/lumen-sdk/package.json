@@ -1,8 +1,17 @@
 {
-  "name": "lumen-sdk",
+  "name": "@lumen/lumen-sdk",
   "version": "0.0.1",
   "private": true,
-  "description": "Plug and play traffic analyzer for your Next.js application",
+  "description": "Lumen - AI bot traffic analytics SDK for Next.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lumen-org/Lumen.git",
+    "directory": "packages/lumen-sdk"
+  },
+  "homepage": "https://github.com/lumen-org/Lumen#readme",
+  "bugs": {
+    "url": "https://github.com/lumen-org/Lumen/issues"
+  },
   "scripts": {
     "build": "pnpm -r build",
     "test": "pnpm -r test",

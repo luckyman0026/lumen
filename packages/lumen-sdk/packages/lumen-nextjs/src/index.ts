@@ -10,4 +10,4 @@ export type {
   LumenConfig,
   LumenEvent,
   EventData,
-} from '@lumen/core';
+} from '@lumen/lumen-core';

@@ -1,12 +1,12 @@
-import { createLumen } from '@lumen/nextjs';
+import { createLumen } from '@lumen/lumen-nextjs';
 import type { NextFetchEvent, NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
 const tracker = createLumen({
-  ingestUrl: process.env.INTELLITRACK_URL ?? '',
-  keyId: process.env.INTELLITRACK_KEY_ID ?? '',
-  hmacSecret: process.env.INTELLITRACK_KEY ?? '',
-  sampleRate: Number.parseFloat(process.env.INTELLITRACK_SAMPLE_RATE ?? '0.1'),
+  ingestUrl: process.env.LUMEN_INGEST_URL ?? '',
+  keyId: process.env.LUMEN_KEY_ID ?? '',
+  hmacSecret: process.env.LUMEN_HMAC_SECRET ?? '',
+  sampleRate: Number.parseFloat(process.env.LUMEN_SAMPLE_RATE ?? '0.1'),
   timeout: 2000,
   debug: true,
 });

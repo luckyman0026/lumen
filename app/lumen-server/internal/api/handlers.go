@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/ai-traffic-analyzer/collector/internal/ingest"
-	"github.com/ai-traffic-analyzer/collector/internal/models"
-	"github.com/ai-traffic-analyzer/collector/internal/storage"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/ingest"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/models"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/storage"
 )
 
 const (

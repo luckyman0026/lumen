@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ai-traffic-analyzer/collector/internal/models"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/models"
 )
 
 // FlushFunc is called when the buffer needs to be flushed.

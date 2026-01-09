@@ -15,7 +15,7 @@ Lumen follows a modular, layered architecture with clear separation of concerns:
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
 │                    Framework Adapter                         │
-│                  (@lumen/nextjs)                      │
+│                  (@lumen/lumen-nextjs)                  │
 │                                                              │
 │  • Request extraction      • Static asset filtering          │
 │  • NextFetchEvent.waitUntil() integration                   │
@@ -24,7 +24,7 @@ Lumen follows a modular, layered architecture with clear separation of concerns:
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
 │                      Core SDK                                │
-│                  (@lumen/core)                        │
+│                  (@lumen/lumen-core)                    │
 │                                                              │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
 │  │   Event     │  │  Sampler    │  │   Signer    │         │

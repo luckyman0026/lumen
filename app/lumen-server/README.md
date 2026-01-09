@@ -1,4 +1,4 @@
-# AI Traffic Analyzer - Event Collector
+# Lumen - Event Collector
 
 A high-throughput event collector service for analyzing AI traffic patterns. This service ingests request events from client SDKs, classifies AI bot traffic using User-Agent analysis, and stores data in ClickHouse for analytics.
 
@@ -541,7 +541,7 @@ LIMIT 20;
 ### Project Structure
 
 ```
-/ai-traffic-analyzer
+/lumen
 ├── cmd/
 │   └── server/
 │       └── main.go           # Application entry point
@@ -586,7 +586,3 @@ INGEST_TOKEN=secret ./collector
 ```bash
 go test ./...
 ```
-
-## 📝 License
-
-MIT License

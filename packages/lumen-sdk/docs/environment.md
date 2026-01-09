@@ -6,17 +6,17 @@ This document describes all environment variables and configuration options for 
 
 | Variable | Description | Example | Required |
 |----------|-------------|---------|----------|
-| `INTELLITRACK_INGEST_URL` | Backend endpoint URL | `https://ingest.example.com/v1/events` | Yes |
-| `INTELLITRACK_KEY_ID` | Key identifier for signing | `prod-key-1` | Yes |
-| `INTELLITRACK_HMAC_SECRET` | HMAC secret for signing | `your-32-byte-secret` | Yes |
+| `LUMEN_INGEST_URL` | Backend endpoint URL | `https://ingest.example.com/v1/events` | Yes |
+| `LUMEN_KEY_ID` | Key identifier for signing | `prod-key-1` | Yes |
+| `LUMEN_HMAC_SECRET` | HMAC secret for signing | `your-32-byte-secret` | Yes |
 
 ## Optional Environment Variables
 
 | Variable | Description | Example | Default |
 |----------|-------------|---------|---------|
-| `INTELLITRACK_SAMPLE_RATE` | Sampling rate (0-1) | `0.1` | `0.1` |
-| `INTELLITRACK_TIMEOUT` | Request timeout in ms | `3000` | `3000` |
-| `INTELLITRACK_DEBUG` | Enable debug logging | `true` | `false` |
+| `LUMEN_SAMPLE_RATE` | Sampling rate (0-1) | `0.1` | `0.1` |
+| `LUMEN_TIMEOUT` | Request timeout in ms | `3000` | `3000` |
+| `LUMEN_DEBUG` | Enable debug logging | `true` | `false` |
 
 ## Secrets Management
 
@@ -41,7 +41,7 @@ Recommended approaches:
 1. **Environment files** (development only)
    ```bash
    # .env.local (gitignored)
-   INTELLITRACK_HMAC_SECRET=your-secret-here
+   LUMEN_HMAC_SECRET=your-secret-here
    ```
 
 2. **Secret managers** (production)
@@ -72,11 +72,11 @@ Lumen supports multiple key IDs for zero-downtime rotation:
 
 ```bash
 # .env.local
-INTELLITRACK_INGEST_URL=http://localhost:8080/v1/events
-INTELLITRACK_KEY_ID=dev-key
-INTELLITRACK_HMAC_SECRET=dev-secret-not-for-production
-INTELLITRACK_SAMPLE_RATE=1.0
-INTELLITRACK_DEBUG=true
+LUMEN_INGEST_URL=http://localhost:8080/v1/events
+LUMEN_KEY_ID=dev-key
+LUMEN_HMAC_SECRET=dev-secret-not-for-production
+LUMEN_SAMPLE_RATE=1.0
+LUMEN_DEBUG=true
 ```
 
 Characteristics:
@@ -88,11 +88,11 @@ Characteristics:
 ### Staging
 
 ```bash
-INTELLITRACK_INGEST_URL=https://staging-ingest.example.com/v1/events
-INTELLITRACK_KEY_ID=staging-key-1
-INTELLITRACK_HMAC_SECRET=<from-secret-manager>
-INTELLITRACK_SAMPLE_RATE=0.5
-INTELLITRACK_DEBUG=true
+LUMEN_INGEST_URL=https://staging-ingest.example.com/v1/events
+LUMEN_KEY_ID=staging-key-1
+LUMEN_HMAC_SECRET=<from-secret-manager>
+LUMEN_SAMPLE_RATE=0.5
+LUMEN_DEBUG=true
 ```
 
 Characteristics:
@@ -104,11 +104,11 @@ Characteristics:
 ### Production
 
 ```bash
-INTELLITRACK_INGEST_URL=https://ingest.example.com/v1/events
-INTELLITRACK_KEY_ID=prod-key-1
-INTELLITRACK_HMAC_SECRET=<from-secret-manager>
-INTELLITRACK_SAMPLE_RATE=0.1
-INTELLITRACK_DEBUG=false
+LUMEN_INGEST_URL=https://ingest.example.com/v1/events
+LUMEN_KEY_ID=prod-key-1
+LUMEN_HMAC_SECRET=<from-secret-manager>
+LUMEN_SAMPLE_RATE=0.1
+LUMEN_DEBUG=false
 ```
 
 Characteristics:
@@ -125,18 +125,18 @@ Characteristics:
 Create `.env.local`:
 
 ```bash
-INTELLITRACK_INGEST_URL=https://ingest.example.com/v1/events
-INTELLITRACK_KEY_ID=prod-key-1
-INTELLITRACK_HMAC_SECRET=your-secret
+LUMEN_INGEST_URL=https://ingest.example.com/v1/events
+LUMEN_KEY_ID=prod-key-1
+LUMEN_HMAC_SECRET=your-secret
 ```
 
 Access in `middleware.ts` or `proxy.ts`:
 
 ```typescript
 const tracker = createLumen({
-  ingestUrl: process.env.INTELLITRACK_INGEST_URL!,
-  keyId: process.env.INTELLITRACK_KEY_ID!,
-  hmacSecret: process.env.INTELLITRACK_HMAC_SECRET!,
+  ingestUrl: process.env.LUMEN_INGEST_URL!,
+  keyId: process.env.LUMEN_KEY_ID!,
+  hmacSecret: process.env.LUMEN_HMAC_SECRET!,
 });
 ```
 
@@ -163,9 +163,9 @@ Lumen validates configuration at initialization:
 ```typescript
 // Throws if required config is missing
 const tracker = createLumen({
-  ingestUrl: process.env.INTELLITRACK_INGEST_URL!, // Required
-  keyId: process.env.INTELLITRACK_KEY_ID!,         // Required
-  hmacSecret: process.env.INTELLITRACK_HMAC_SECRET!, // Required
+  ingestUrl: process.env.LUMEN_INGEST_URL!, // Required
+  keyId: process.env.LUMEN_KEY_ID!,         // Required
+  hmacSecret: process.env.LUMEN_HMAC_SECRET!, // Required
 });
 ```
 
@@ -176,9 +176,9 @@ Add validation to your application startup:
 ```typescript
 function validateConfig() {
   const required = [
-    'INTELLITRACK_INGEST_URL',
-    'INTELLITRACK_KEY_ID',
-    'INTELLITRACK_HMAC_SECRET',
+    'LUMEN_INGEST_URL',
+    'LUMEN_KEY_ID',
+    'LUMEN_HMAC_SECRET',
   ];
 
   const missing = required.filter(key => !process.env[key]);
@@ -191,7 +191,7 @@ function validateConfig() {
 
 ## Troubleshooting
 
-### "INTELLITRACK_HMAC_SECRET is not defined"
+### "LUMEN_HMAC_SECRET is not defined"
 
 1. Check `.env.local` exists and is not gitignored incorrectly
 2. Restart development server after adding env vars

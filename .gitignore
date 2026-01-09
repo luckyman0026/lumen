@@ -1,0 +1,17 @@
+# Misc
+.DS_Store
+*.pem
+node_modules
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Vercel
+.vercel
+
+# Local env files
+.env*.local
+.env

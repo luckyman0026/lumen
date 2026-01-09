@@ -12,19 +12,19 @@ Fire-and-forget traffic analytics SDK for Next.js. Captures request-level data w
 ## Quick Start
 
 ```bash
-pnpm add @lumen/nextjs
+pnpm add @lumen/lumen-nextjs
 ```
 
 Create `proxy.ts`:
 
 ```typescript
-import { createLumen } from '@lumen/nextjs';
+import { createLumen } from '@lumen/lumen-nextjs';
 import { NextRequest, NextFetchEvent, NextResponse } from 'next/server';
 
 const tracker = createLumen({
-  ingestUrl: process.env.INTELLITRACK_INGEST_URL!,
-  keyId: process.env.INTELLITRACK_KEY_ID!,
-  hmacSecret: process.env.INTELLITRACK_HMAC_SECRET!,
+  ingestUrl: process.env.LUMEN_INGEST_URL!,
+  keyId: process.env.LUMEN_KEY_ID!,
+  hmacSecret: process.env.LUMEN_HMAC_SECRET!,
 });
 
 export function proxy(req: NextRequest, event: NextFetchEvent) {
@@ -40,17 +40,17 @@ export const config = {
 Add environment variables:
 
 ```bash
-INTELLITRACK_INGEST_URL=https://your-backend.com/v1/events
-INTELLITRACK_KEY_ID=prod-key-1
-INTELLITRACK_HMAC_SECRET=your-secret  # openssl rand -base64 32
+LUMEN_INGEST_URL=https://your-backend.com/v1/events
+LUMEN_KEY_ID=prod-key-1
+LUMEN_HMAC_SECRET=your-secret  # openssl rand -base64 32
 ```
 
 ## Packages
 
 | Package | Description |
 |---------|-------------|
-| [@lumen/core](./packages/lumen-core) | Framework-agnostic core SDK |
-| [@lumen/nextjs](./packages/lumen-nextjs) | Next.js 15+ adapter |
+| [@lumen/lumen-core](./packages/lumen-core) | Framework-agnostic core SDK |
+| [@lumen/lumen-nextjs](./packages/lumen-nextjs) | Next.js 15+ adapter |
 
 ## Configuration
 
@@ -125,7 +125,6 @@ cd examples/nextjs-16-app && pnpm dev
 - [API Reference](docs/api.md) — Full API documentation
 - [Environment](docs/environment.md) — Configuration guide
 - [Testing](docs/testing.md) — Test conventions
-- [Contributing](CONTRIBUTING.md) — How to contribute
 
 ## License
 

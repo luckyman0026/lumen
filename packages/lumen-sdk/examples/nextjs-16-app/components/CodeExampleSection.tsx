@@ -22,7 +22,7 @@ export function CodeExampleSection() {
 							<span className="text-amber-400">from</span>
 							<span className="text-amber-200">
 								{" "}
-								&apos;@lumen/nextjs&apos;
+								&apos;@lumen/lumen-nextjs&apos;
 							</span>
 						</div>
 						<div>&nbsp;</div>
@@ -35,21 +35,21 @@ export function CodeExampleSection() {
 						<div className="pl-4">
 							<span className="text-zinc-100">ingestUrl: </span>
 							<span className="text-amber-200">
-								process.env.INTELLITRACK_INGEST_URL
+								process.env.LUMEN_INGEST_URL
 							</span>
 							<span className="text-zinc-500">,</span>
 						</div>
 						<div className="pl-4">
 							<span className="text-zinc-100">keyId: </span>
 							<span className="text-amber-200">
-								process.env.INTELLITRACK_KEY_ID
+								process.env.LUMEN_KEY_ID
 							</span>
 							<span className="text-zinc-500">,</span>
 						</div>
 						<div className="pl-4">
 							<span className="text-zinc-100">hmacSecret: </span>
 							<span className="text-amber-200">
-								process.env.INTELLITRACK_HMAC_SECRET
+								process.env.LUMEN_HMAC_SECRET
 							</span>
 							<span className="text-zinc-500">,</span>
 						</div>

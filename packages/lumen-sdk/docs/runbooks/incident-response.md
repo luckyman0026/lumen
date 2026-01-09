@@ -202,13 +202,13 @@ tracker.capture(req, event); // No await!
 
 ```bash
 # View package info
-npm view @lumen/core
+npm view @lumen/lumen-core
 
 # Check for vulnerabilities
 npm audit
 
 # View download stats
-npm show @lumen/core downloads
+npm show @lumen/lumen-core downloads
 ```
 
 ### Debug SDK in Production
@@ -227,7 +227,7 @@ If users need to avoid a problematic version:
 ```json
 {
   "resolutions": {
-    "@lumen/core": "1.0.0"
+    "@lumen/lumen-core": "1.0.0"
   }
 }
 ```

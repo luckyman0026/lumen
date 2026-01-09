@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# AI Traffic Analyzer - Test Traffic Generator
+# Lumen - Test Traffic Generator
 # Generates realistic AI bot traffic for testing the collector service
 #
 # Usage: ./scripts/test-traffic.sh [OPTIONS]

@@ -22,10 +22,10 @@ Open http://localhost:3001
 ## Environment Variables
 
 ```bash
-INTELLITRACK_URL=https://webhook.site/your-id
-INTELLITRACK_KEY_ID=dev-key
-INTELLITRACK_KEY=dev-secret
-INTELLITRACK_SAMPLE_RATE=1.0
+LUMEN_INGEST_URL=https://webhook.site/your-id
+LUMEN_KEY_ID=dev-key
+LUMEN_HMAC_SECRET=dev-secret
+LUMEN_SAMPLE_RATE=1.0
 ```
 
 Use [webhook.site](https://webhook.site) to test without a backend.
@@ -63,7 +63,3 @@ With `debug: true`, check console for:
 [Lumen] Scheduled: /
 [Lumen] Captured: abc-123-...
 ```
-
-## License
-
-MIT

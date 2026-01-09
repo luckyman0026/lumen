@@ -24,14 +24,14 @@ Configure via `ingestUrl` option. Example:
 https://your-backend.com/v1/events
 ```
 
-## @lumen/core
+## @lumen/lumen-core
 
 ### `createLumenClient(config)`
 
 Creates a new Lumen client instance.
 
 ```typescript
-import { createLumenClient } from '@lumen/core';
+import { createLumenClient } from '@lumen/lumen-core';
 
 const client = createLumenClient({
   ingestUrl: 'https://ingest.example.com/v1/events',
@@ -93,7 +93,7 @@ await client.captureEvent({
 Creates an event builder instance.
 
 ```typescript
-import { createEventBuilder } from '@lumen/core';
+import { createEventBuilder } from '@lumen/lumen-core';
 
 const builder = createEventBuilder();
 const event = builder.build({
@@ -108,7 +108,7 @@ const event = builder.build({
 Creates a deterministic sampler.
 
 ```typescript
-import { createSampler } from '@lumen/core';
+import { createSampler } from '@lumen/lumen-core';
 
 const sampler = createSampler(0.1);
 const shouldSample = await sampler.shouldSample(requestId);
@@ -119,7 +119,7 @@ const shouldSample = await sampler.shouldSample(requestId);
 Creates an HMAC-SHA256 signer.
 
 ```typescript
-import { createSigner } from '@lumen/core';
+import { createSigner } from '@lumen/lumen-core';
 
 const signer = createSigner('your-secret');
 const signature = await signer.sign(timestamp, body);
@@ -130,7 +130,7 @@ const signature = await signer.sign(timestamp, body);
 Creates an HTTP transport.
 
 ```typescript
-import { createTransport } from '@lumen/core';
+import { createTransport } from '@lumen/lumen-core';
 
 const transport = createTransport({
   ingestUrl: 'https://ingest.example.com/v1/events',
@@ -138,19 +138,19 @@ const transport = createTransport({
 });
 ```
 
-## @lumen/nextjs
+## @lumen/lumen-nextjs
 
 ### `createLumen(config)`
 
 Creates an Lumen instance configured for Next.js.
 
 ```typescript
-import { createLumen } from '@lumen/nextjs';
+import { createLumen } from '@lumen/lumen-nextjs';
 
 const tracker = createLumen({
-  ingestUrl: process.env.INTELLITRACK_INGEST_URL!,
-  keyId: process.env.INTELLITRACK_KEY_ID!,
-  hmacSecret: process.env.INTELLITRACK_HMAC_SECRET!,
+  ingestUrl: process.env.LUMEN_INGEST_URL!,
+  keyId: process.env.LUMEN_KEY_ID!,
+  hmacSecret: process.env.LUMEN_HMAC_SECRET!,
   sampleRate: 0.1,
   debug: true,
   excludePaths: ['/health', '/ready'],
@@ -252,10 +252,10 @@ import type {
   LumenEvent,
   EventData,
   LumenClient,
-} from '@lumen/core';
+} from '@lumen/lumen-core';
 
 import type {
   NextJSConfig,
   LumenNextJS,
-} from '@lumen/nextjs';
+} from '@lumen/lumen-nextjs';
 ```

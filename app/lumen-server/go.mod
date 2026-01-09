@@ -1,4 +1,4 @@
-module github.com/ai-traffic-analyzer/collector
+module github.com/lumen-org/lumen/app/lumen-server
 
 go 1.22
 

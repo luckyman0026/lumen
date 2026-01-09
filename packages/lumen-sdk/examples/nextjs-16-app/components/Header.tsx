@@ -98,7 +98,7 @@ export function Header() {
 
 				<div className="flex items-center gap-4">
 					<Link
-						href="https://github.com/lumen/lumen"
+						href="https://github.com/lumen-org/Lumen"
 						className="text-zinc-600 hover:text-zinc-950 transition-colors"
 						aria-label="GitHub"
 					>

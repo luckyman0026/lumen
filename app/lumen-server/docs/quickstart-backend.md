@@ -1,6 +1,6 @@
 # Backend Quickstart Guide
 
-Get the AI Traffic Analyzer backend running in under 5 minutes.
+Get the Lumen backend running in under 5 minutes.
 
 ## Prerequisites
 
@@ -179,4 +179,4 @@ docker exec ai-traffic-clickhouse clickhouse-client \
 
 ## API Reference
 
-See [API.md](../API.md) for complete endpoint documentation.
+See the main [Lumen Server README](../README.md#-api-reference) for complete endpoint documentation.

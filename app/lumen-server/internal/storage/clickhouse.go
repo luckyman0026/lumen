@@ -10,8 +10,8 @@ import (
 	"github.com/ClickHouse/clickhouse-go/v2"
 	"github.com/ClickHouse/clickhouse-go/v2/lib/driver"
 
-	"github.com/ai-traffic-analyzer/collector/internal/config"
-	"github.com/ai-traffic-analyzer/collector/internal/models"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/config"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/models"
 )
 
 // createTableSQL is the DDL for the events table.

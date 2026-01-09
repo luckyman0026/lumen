@@ -112,8 +112,8 @@ After deployment:
 
 1. **Verify npm packages**
    ```bash
-   npm view @lumen/core version
-   npm view @lumen/nextjs version
+   npm view @lumen/lumen-core version
+   npm view @lumen/lumen-nextjs version
    ```
 
 2. **Test installation in fresh project**
@@ -121,13 +121,13 @@ After deployment:
    mkdir /tmp/test-lumen
    cd /tmp/test-lumen
    npm init -y
-   npm install @lumen/nextjs
+   npm install @lumen/lumen-nextjs
    ```
 
 3. **Verify package contents**
    ```bash
-   npm pack @lumen/core --dry-run
-   npm pack @lumen/nextjs --dry-run
+   npm pack @lumen/lumen-core --dry-run
+   npm pack @lumen/lumen-nextjs --dry-run
    ```
 
 ## Rollback Procedure
@@ -137,8 +137,8 @@ If issues are discovered after deployment:
 ### 1. Deprecate Problematic Version
 
 ```bash
-npm deprecate @lumen/core@1.x.x "Critical bug, please upgrade to 1.x.y"
-npm deprecate @lumen/nextjs@1.x.x "Critical bug, please upgrade to 1.x.y"
+npm deprecate @lumen/lumen-core@1.x.x "Critical bug, please upgrade to 1.x.y"
+npm deprecate @lumen/lumen-nextjs@1.x.x "Critical bug, please upgrade to 1.x.y"
 ```
 
 ### 2. Publish Hotfix
@@ -157,7 +157,7 @@ npm deprecate @lumen/nextjs@1.x.x "Critical bug, please upgrade to 1.x.y"
 Only within 72 hours of publish, and only if absolutely necessary:
 
 ```bash
-npm unpublish @lumen/core@1.x.x
+npm unpublish @lumen/lumen-core@1.x.x
 ```
 
 **Warning:** Unpublishing can break dependent projects. Prefer deprecation.

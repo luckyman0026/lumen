@@ -64,9 +64,6 @@ Setup for API_URL and API_KEY environment variables across local, staging, and p
 ### [Testing Guide](docs/testing.md)
 Recommended testing stack (Vitest + Testing Library), example tests, and CI integration setup.
 
-### [Contributing](CONTRIBUTING.md)
-Branch naming, commit format, PR process, and code review guidelines.
-
 ### [ADRs](docs/adr/)
 Architecture Decision Records template for documenting technical decisions.
 

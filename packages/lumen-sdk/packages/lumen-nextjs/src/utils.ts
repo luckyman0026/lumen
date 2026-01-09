@@ -1,5 +1,5 @@
 import type { NextRequest } from 'next/server';
-import type { EventData } from '@lumen/core';
+import type { EventData } from '@lumen/lumen-core';
 
 const DEFAULT_EXCLUDE_PATTERNS = [
   /^\/_next\/static\//,

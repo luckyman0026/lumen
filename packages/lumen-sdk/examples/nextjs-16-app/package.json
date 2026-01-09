@@ -1,14 +1,15 @@
 {
-  "name": "lumen-nextjs-16-example",
+  "name": "@lumen/lumen-nextjs-example",
   "version": "0.0.1",
   "private": true,
+  "description": "Lumen Next.js 16 integration example",
   "scripts": {
     "dev": "next dev --port 3001",
     "start": "next start",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
-    "@lumen/nextjs": "workspace:*",
+    "@lumen/lumen-nextjs": "workspace:*",
     "next": "^16.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

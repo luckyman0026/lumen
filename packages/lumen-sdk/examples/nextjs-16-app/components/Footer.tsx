@@ -11,13 +11,13 @@ export function Footer() {
 
 				<div className="flex items-center gap-6 text-sm text-zinc-500">
 					<Link
-						href="https://github.com/lumen/lumen-sdk"
+						href="https://github.com/lumen-org/Lumen"
 						className="hover:text-zinc-950 transition-colors"
 					>
 						GitHub
 					</Link>
 					<Link
-						href="https://npmjs.com/package/@lumen/nextjs"
+						href="https://npmjs.com/package/@lumen/lumen-nextjs"
 						className="hover:text-zinc-950 transition-colors"
 					>
 						NPM

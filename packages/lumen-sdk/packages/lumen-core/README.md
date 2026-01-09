@@ -1,17 +1,17 @@
-# @lumen/core
+# @lumen/lumen-core
 
 Framework-agnostic core SDK for fire-and-forget request tracking.
 
 ## Installation
 
 ```bash
-pnpm add @lumen/core
+pnpm add @lumen/lumen-core
 ```
 
 ## Usage
 
 ```typescript
-import { createLumenClient } from '@lumen/core';
+import { createLumenClient } from '@lumen/lumen-core';
 
 const tracker = createLumenClient({
   ingestUrl: 'https://ingest.example.com/v1/events',
@@ -64,7 +64,7 @@ import {
   createSampler,       // Deterministic sampling
   createSigner,        // HMAC-SHA256 signing
   createTransport,     // HTTP transport
-} from '@lumen/core';
+} from '@lumen/lumen-core';
 ```
 
 ## Signature Format

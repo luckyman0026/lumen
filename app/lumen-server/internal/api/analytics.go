@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ai-traffic-analyzer/collector/internal/models"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/models"
 )
 
 // Overview handles GET /v1/overview requests.

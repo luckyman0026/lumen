@@ -16,7 +16,7 @@ export function HeroSection() {
 				<div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
 					<div className="flex items-center gap-2 px-4 py-3 bg-zinc-100 font-mono text-sm text-zinc-700 border border-zinc-200">
 						<span className="text-zinc-400">$</span>
-						<code>pnpm add @lumen/nextjs</code>
+						<code>pnpm add @lumen/lumen-nextjs</code>
 						<button
 							type="button"
 							className="ml-2 text-zinc-400 hover:text-zinc-600 transition-colors"

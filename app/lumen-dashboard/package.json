@@ -1,7 +1,8 @@
 {
-	"name": "lumen-dashboard",
+	"name": "@lumen/lumen-dashboard",
 	"version": "0.1.0",
 	"private": true,
+	"description": "Lumen Dashboard - Real-time analytics dashboard for monitoring AI bot traffic",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",

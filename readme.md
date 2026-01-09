@@ -23,13 +23,13 @@
 ```
 ┌──────────────────────────────────────────────────────────────────┐
 │                      YOUR APPLICATION                             │
-│            (Next.js with @lumen/nextjs SDK)               │
+│            (Next.js with @lumen/lumen-nextjs SDK)               │
 │                       proxy.ts middleware                         │
 └────────────────────────┬─────────────────────────────────────────┘
                          │ HMAC-signed events (fire-and-forget)
                          ▼
 ┌──────────────────────────────────────────────────────────────────┐
-│                 INTELLITRACK SERVER (Go)                          │
+│                 LUMEN SERVER (Go)                             │
 │  ┌─────────┐   ┌────────────┐   ┌────────┐   ┌─────────────────┐ │
 │  │ Ingest  │ → │ Classifier │ → │ Buffer │ → │ ClickHouse      │ │
 │  │   API   │   │ (20+ bots) │   │ (batch)│   │ (analytics DB)  │ │
@@ -38,7 +38,7 @@
                          │ REST API queries
                          ▼
 ┌──────────────────────────────────────────────────────────────────┐
-│               INTELLITRACK DASHBOARD (Next.js 16)                 │
+│               LUMEN DASHBOARD (Next.js 16)                    │
 │  ┌──────────┐  ┌─────────────┐  ┌───────────┐  ┌──────────────┐  │
 │  │ Overview │  │ Time Series │  │Top Routes │  │  Top Bots    │  │
 │  └──────────┘  └─────────────┘  └───────────┘  └──────────────┘  │
@@ -93,8 +93,8 @@ lumen/
 ### 1. Clone & Start Services
 
 ```bash
-git clone https://github.com/your-org/lumen.git
-cd lumen
+git clone https://github.com/lumen-org/Lumen.git
+cd Lumen
 
 # Start all services (server, dashboard, clickhouse)
 docker compose up -d
@@ -113,19 +113,19 @@ docker compose logs -f
 ### 3. Integrate the SDK
 
 ```bash
-pnpm add @lumen/nextjs
+pnpm add @lumen/lumen-nextjs
 ```
 
 Create `proxy.ts` in your Next.js app:
 
 ```typescript
-import { createLumen } from '@lumen/nextjs';
+import { createLumen } from '@lumen/lumen-nextjs';
 import { NextRequest, NextFetchEvent, NextResponse } from 'next/server';
 
 const tracker = createLumen({
-  ingestUrl: process.env.INTELLITRACK_URL!,
-  keyId: process.env.INTELLITRACK_KEY_ID!,
-  hmacSecret: process.env.INTELLITRACK_SECRET!,
+  ingestUrl: process.env.LUMEN_INGEST_URL!,
+  keyId: process.env.LUMEN_KEY_ID!,
+  hmacSecret: process.env.LUMEN_HMAC_SECRET!,
   sampleRate: 0.1, // 10% sampling
 });
 
@@ -203,8 +203,8 @@ High-throughput Go backend for event collection and analytics.
 Fire-and-forget client SDK for capturing request events.
 
 ```
-@lumen/core      — Framework-agnostic core
-@lumen/nextjs    — Next.js 15/16 adapter
+@lumen/lumen-core      — Framework-agnostic core
+@lumen/lumen-nextjs    — Next.js 15/16 adapter
 ```
 
 **Features:**
@@ -395,10 +395,6 @@ Example: If `/api/products` receives 100K AI requests/month at $5/1K:
 3. Commit changes (`git commit -m 'Add amazing feature'`)
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-See individual component docs for specific guidelines:
-- [Dashboard Contributing](./app/lumen-dashboard/CONTRIBUTING.md)
-- [SDK Contributing](./packages/lumen-sdk/CONTRIBUTING.md)
 
 ---
 

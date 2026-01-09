@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/ai-traffic-analyzer/collector/internal/models"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/models"
 )
 
 // Middleware provides HTTP middleware functions.

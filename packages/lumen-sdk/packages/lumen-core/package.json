@@ -1,7 +1,7 @@
 {
-  "name": "@lumen/core",
+  "name": "@lumen/lumen-core",
   "version": "0.0.1",
-  "description": "Framework-agnostic Lumen SDK core for fire-and-forget request tracking",
+  "description": "Lumen Core - Framework-agnostic SDK for fire-and-forget AI traffic tracking",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -31,7 +31,15 @@
     "fire-and-forget"
   ],
   "author": "",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lumen-org/Lumen.git",
+    "directory": "packages/lumen-sdk/packages/lumen-core"
+  },
+  "homepage": "https://github.com/lumen-org/Lumen#readme",
+  "bugs": {
+    "url": "https://github.com/lumen-org/Lumen/issues"
+  },
   "devDependencies": {
     "@types/node": "^20.11.5",
     "tsup": "^8.0.1",

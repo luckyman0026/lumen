@@ -1,11 +1,11 @@
-# @lumen/nextjs
+# @lumen/lumen-nextjs
 
 Next.js adapter for Lumen. Integrates with `proxy.ts` / `middleware.ts` for fire-and-forget event tracking.
 
 ## Installation
 
 ```bash
-pnpm add @lumen/nextjs
+pnpm add @lumen/lumen-nextjs
 ```
 
 ## Usage
@@ -13,13 +13,13 @@ pnpm add @lumen/nextjs
 Create `proxy.ts` in your project root:
 
 ```typescript
-import { createLumen } from '@lumen/nextjs';
+import { createLumen } from '@lumen/lumen-nextjs';
 import { NextRequest, NextFetchEvent, NextResponse } from 'next/server';
 
 const tracker = createLumen({
-  ingestUrl: process.env.INTELLITRACK_INGEST_URL!,
-  keyId: process.env.INTELLITRACK_KEY_ID!,
-  hmacSecret: process.env.INTELLITRACK_HMAC_SECRET!,
+  ingestUrl: process.env.LUMEN_INGEST_URL!,
+  keyId: process.env.LUMEN_KEY_ID!,
+  hmacSecret: process.env.LUMEN_HMAC_SECRET!,
 });
 
 export function proxy(req: NextRequest, event: NextFetchEvent) {
@@ -82,7 +82,7 @@ import {
   extractRequestData,     // Extract data from NextRequest
   extractIpAddress,       // Extract IP from headers
   shouldCapture,          // Check if path should be captured
-} from '@lumen/nextjs';
+} from '@lumen/lumen-nextjs';
 ```
 
 ## Compatibility

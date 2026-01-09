@@ -23,7 +23,7 @@ importers:
 
   examples/nextjs-16-app:
     dependencies:
-      '@lumen/nextjs':
+      '@lumen/lumen-nextjs':
         specifier: workspace:*
         version: link:../../packages/lumen-nextjs
       next:
@@ -75,7 +75,7 @@ importers:
 
   packages/lumen-nextjs:
     dependencies:
-      '@lumen/core':
+      '@lumen/lumen-core':
         specifier: workspace:*
         version: link:../lumen-core
     devDependencies:

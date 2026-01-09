@@ -1,7 +1,7 @@
 {
-  "name": "@lumen/nextjs",
+  "name": "@lumen/lumen-nextjs",
   "version": "0.0.1",
-  "description": "Next.js adapter for @lumen/core - proxy.ts integration",
+  "description": "Lumen Next.js - Next.js adapter for @lumen/lumen-core with proxy.ts integration",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -32,9 +32,17 @@
     "analytics"
   ],
   "author": "",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lumen-org/Lumen.git",
+    "directory": "packages/lumen-sdk/packages/lumen-nextjs"
+  },
+  "homepage": "https://github.com/lumen-org/Lumen#readme",
+  "bugs": {
+    "url": "https://github.com/lumen-org/Lumen/issues"
+  },
   "dependencies": {
-    "@lumen/core": "workspace:*"
+    "@lumen/lumen-core": "workspace:*"
   },
   "peerDependencies": {
     "next": "^15.0.0 || ^16.0.0"

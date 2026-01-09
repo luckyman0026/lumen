@@ -1,4 +1,4 @@
-import type { LumenConfig } from '@lumen/core';
+import type { LumenConfig } from '@lumen/lumen-core';
 import type { NextRequest, NextFetchEvent } from 'next/server';
 
 export interface NextJSLumenClient {

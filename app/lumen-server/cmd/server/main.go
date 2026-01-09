@@ -13,13 +13,13 @@ import (
 	"github.com/go-chi/chi/v5"
 	chimiddleware "github.com/go-chi/chi/v5/middleware"
 
-	"github.com/ai-traffic-analyzer/collector/internal/api"
-	"github.com/ai-traffic-analyzer/collector/internal/buffer"
-	"github.com/ai-traffic-analyzer/collector/internal/classifier"
-	"github.com/ai-traffic-analyzer/collector/internal/config"
-	"github.com/ai-traffic-analyzer/collector/internal/ingest"
-	"github.com/ai-traffic-analyzer/collector/internal/models"
-	"github.com/ai-traffic-analyzer/collector/internal/storage"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/api"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/buffer"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/classifier"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/config"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/ingest"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/models"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/storage"
 )
 
 const (
@@ -28,7 +28,7 @@ const (
 
 func main() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
-	log.Println("INFO: Starting AI Traffic Analyzer Collector...")
+	log.Println("INFO: Starting Lumen Collector...")
 
 	// Load configuration
 	cfg, err := config.Load()

@@ -9,9 +9,9 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/ai-traffic-analyzer/collector/internal/buffer"
-	"github.com/ai-traffic-analyzer/collector/internal/classifier"
-	"github.com/ai-traffic-analyzer/collector/internal/models"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/buffer"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/classifier"
+	"github.com/lumen-org/lumen/app/lumen-server/internal/models"
 )
 
 // ValidationError represents an event validation error.

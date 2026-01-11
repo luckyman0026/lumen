@@ -137,7 +137,7 @@ curl "http://localhost:8080/v1/top-bots?limit=10" \
 ### Verify in ClickHouse
 
 ```bash
-docker exec ai-traffic-clickhouse clickhouse-client \
+docker exec lumen-clickhouse clickhouse-client \
   --query "SELECT is_ai, ai_vendor, bot_name, route, count() as cnt FROM ai_traffic_events GROUP BY is_ai, ai_vendor, bot_name, route"
 ```
 
@@ -173,7 +173,7 @@ docker compose exec collector env | grep INGEST_TOKEN
 2. Verify events were accepted (`{"ok":true}`)
 3. Query ClickHouse directly:
 ```bash
-docker exec ai-traffic-clickhouse clickhouse-client \
+docker exec lumen-clickhouse clickhouse-client \
   --query "SELECT count() FROM ai_traffic_events"
 ```
 

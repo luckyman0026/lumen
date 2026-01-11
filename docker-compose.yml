@@ -13,7 +13,7 @@ services:
       - "--entrypoints.websecure.address=:443"
       - "--certificatesresolvers.letsencrypt.acme.httpchallenge=true"
       - "--certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web"
-      - "--certificatesresolvers.letsencrypt.acme.email=admin@buildbear.io"
+      - "--certificatesresolvers.letsencrypt.acme.email=admin@example.com"
       - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
     ports:
       - "80:80"
@@ -54,11 +54,11 @@ services:
       - lumen-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.server.rule=Host(`backend.aitraffic.buildbear.io`)"
+      - "traefik.http.routers.server.rule=Host(`api.lumen.example.com`)"
       - "traefik.http.routers.server.entrypoints=websecure"
       - "traefik.http.routers.server.tls.certresolver=letsencrypt"
       - "traefik.http.services.server.loadbalancer.server.port=8080"
-      - "traefik.http.routers.server-http.rule=Host(`backend.aitraffic.buildbear.io`)"
+      - "traefik.http.routers.server-http.rule=Host(`api.lumen.example.com`)"
       - "traefik.http.routers.server-http.entrypoints=web"
       - "traefik.http.routers.server-http.middlewares=redirect-to-https"
 
@@ -80,11 +80,11 @@ services:
       - lumen-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.dashboard.rule=Host(`aitraffic.buildbear.io`)"
+      - "traefik.http.routers.dashboard.rule=Host(`lumen.example.com`)"
       - "traefik.http.routers.dashboard.entrypoints=websecure"
       - "traefik.http.routers.dashboard.tls.certresolver=letsencrypt"
       - "traefik.http.services.dashboard.loadbalancer.server.port=3000"
-      - "traefik.http.routers.dashboard-http.rule=Host(`aitraffic.buildbear.io`)"
+      - "traefik.http.routers.dashboard-http.rule=Host(`lumen.example.com`)"
       - "traefik.http.routers.dashboard-http.entrypoints=web"
       - "traefik.http.routers.dashboard-http.middlewares=redirect-to-https"
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"

@@ -10,8 +10,8 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@lumen/core": ["../../packages/lumen-core/src"],
-      "@lumen/nextjs": ["../../packages/lumen-nextjs/src"]
+      "@lumen/lumen-core": ["../../packages/lumen-core/src"],
+      "@lumen/lumen-nextjs": ["../../packages/lumen-nextjs/src"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

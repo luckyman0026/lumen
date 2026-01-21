@@ -1,6 +1,6 @@
 {
   "name": "@lumen/lumen-nextjs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Lumen Next.js - Next.js adapter for @lumen/lumen-core with proxy.ts integration",
   "type": "module",
   "main": "./dist/index.cjs",

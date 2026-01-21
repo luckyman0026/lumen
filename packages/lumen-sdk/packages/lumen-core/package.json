@@ -1,6 +1,6 @@
 {
   "name": "@lumen/lumen-core",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Lumen Core - Framework-agnostic SDK for fire-and-forget AI traffic tracking",
   "type": "module",
   "main": "./dist/index.cjs",

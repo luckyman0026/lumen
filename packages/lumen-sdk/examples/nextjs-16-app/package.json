@@ -1,6 +1,6 @@
 {
   "name": "@lumen/lumen-nextjs-example",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "description": "Lumen Next.js 16 integration example",
   "scripts": {
